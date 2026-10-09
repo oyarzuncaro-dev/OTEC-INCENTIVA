@@ -6,7 +6,7 @@ Esta guía contiene la estructura completa, los textos legibles y listos para co
 
 ## 🎨 Guía de Identidad Visual y Paleta de Colores (Wix Palette)
 
-Basado en el logo oficial y el material corporativo, se recomienda configurar el tema de color global en Wix con los siguientes tonos:
+Basado en el Logo Incentiva con Emblema Multicolor oficial y el material corporativo, se recomienda configurar el tema de color global en Wix con los siguientes tonos:
 
 * **Naranja Principal (Energía e Impacto):** `#F26522` *(Para botones primarios, llamadas a la acción e hitos)*
 * **Azul Océano (Confianza y Estándar):** `#0082C8` *(Para encabezados secundarios, íconos técnicos y enlaces)*
