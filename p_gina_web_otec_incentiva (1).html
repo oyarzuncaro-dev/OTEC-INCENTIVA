@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- EDITABLE: Título de la pestaña del navegador -->
+    <title>Incentivando - OTEC & Desarrollos Regenerativos</title>
+    
+    <!-- Tailwind CSS CDN para estilos responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        /* EDITABLE: Personalización de la paleta de colores corporativos */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#F26522', // Color principal Naranja
+                            blue: '#0082C8',   // Azul Océano
+                            green: '#38A14A',  // Verde Regeneración
+                            yellow: '#F9A01B', // Amarillo Sol
+                            dark: '#2D3142',   // Texto Oscuro / Grafito
+                            light: '#F8F9FA'   // Fondo Claro
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .gradient-accent-bar {
+            background: linear-gradient(90deg, #F26522 0%, #0082C8 33%, #38A14A 66%, #F9A01B 100%);
+        }
+        .hero-pattern {
+            background-color: #2D3142;
+            background-image: radial-gradient(#0082C8 0.75px, transparent 0.75px), radial-gradient(#F26522 0.75px, #2D3142 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-dark bg-white antialiased flex flex-col min-h-screen">
+
+    <!-- Gradient Brand Accent Line -->
+    <div class="h-1.5 gradient-accent-bar w-full fixed top-0 z-50"></div>
+
+    <!-- ================================================================= -->
+    <!-- EDITABLE SECCIÓN 1: BARRA SUPERIOR DE ANUNCIOS Y CONTACTO        -->
+    <!-- ================================================================= -->
+    <div class="bg-brand-dark text-white text-xs py-2 pt-3 px-4 fixed top-1.5 left-0 right-0 z-40 border-b border-gray-700">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-3">
+                <span class="bg-brand-orange text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                    <i class="fa-solid fa-award"></i> NCh 2728:2015
+                </span>
+                <!-- EDITABLE: Texto de acreditación SENCE -->
+                <span class="text-gray-300 hidden md:inline">OTEC Certificada | Acreditados por SENCE (Res. N° 2723-2022)</span>
+            </div>
+            <!-- EDITABLE: Datos de contacto de cabecera -->
+            <div class="flex items-center gap-4 text-gray-300">
+                <a href="tel:+56912345678" class="hover:text-brand-yellow transition-colors flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-brand-orange"></i> +56 9 1234 5678
+                </a>
+                <span class="text-gray-600">|</span>
+                <a href="mailto:contacto@incentivando.cl" class="hover:text-brand-yellow transition-colors flex items-center gap-1">
+                    <i class="fa-solid fa-envelope text-brand-blue"></i> contacto@incentivando.cl
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- EDITABLE SECCIÓN 2: LOGO Y MENÚ DE NAVEGACIÓN                     -->
+    <!-- ================================================================= -->
+    <header class="sticky top-[38px] z-30 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- EDITABLE: Logo de la Empresa -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="relative w-11 h-11 flex items-center justify-center">
+                    <svg class="w-full h-full" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="42" fill="none" stroke="#38A14A" stroke-width="8" stroke-dasharray="180 80"/>
+                        <circle cx="50" cy="50" r="35" fill="none" stroke="#F26522" stroke-width="8" stroke-dasharray="160 90"/>
+                        <circle cx="50" cy="50" r="28" fill="none" stroke="#0082C8" stroke-width="7" stroke-dasharray="140 100"/>
+                        <circle cx="50" cy="50" r="20" fill="#F9A01B" />
+                        <path d="M50 20 L53 32 L62 25 L58 36 L70 35 L62 43 L73 50 L62 57 L70 65 L58 64 L62 75 L53 68 L50 80 L47 68 L38 75 L42 64 L30 65 L38 57 L27 50 L38 43 L30 35 L42 36 L38 25 L47 32 Z" fill="#F26522"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-heading font-extrabold text-2xl tracking-tight text-brand-dark leading-none">
+                        Incentiva<span class="text-brand-orange">ndo</span>
+                    </span>
+                    <!-- EDITABLE: Slogan bajo el nombre -->
+                    <span class="text-[10px] uppercase tracking-widest font-bold text-gray-500">Desarrollos Regenerativos</span>
+                </div>
+            </a>
+
+            <!-- EDITABLE: Enlaces del Menú Principal -->
+            <nav class="hidden lg:flex items-center gap-7 font-medium text-sm text-gray-700">
+                <a href="#inicio" class="hover:text-brand-orange transition-colors">Inicio</a>
+                <a href="#nosotros" class="hover:text-brand-orange transition-colors">Quiénes Somos</a>
+                <a href="#cursos" class="hover:text-brand-orange transition-colors">Cursos SENCE</a>
+                <a href="#consultoria" class="hover:text-brand-orange transition-colors">Consultoría</a>
+                <a href="#franquicia" class="hover:text-brand-orange transition-colors">Franquicia SENCE</a>
+                <a href="#clientes" class="hover:text-brand-orange transition-colors">Clientes</a>
+            </nav>
+
+            <!-- EDITABLE: Botón de Cotización Directa -->
+            <div class="hidden sm:flex items-center gap-3">
+                <button onclick="openModal('Cotización General')" class="bg-brand-orange hover:bg-orange-600 text-white font-semibold px-5 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-file-signature"></i>
+                    Cotizar Capacitación
+                </button>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-gray-600 hover:text-brand-dark hover:bg-gray-100 focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="block py-2 text-gray-700 font-medium hover:text-brand-orange">Inicio</a>
+            <a href="#nosotros" class="block py-2 text-gray-700 font-medium hover:text-brand-orange">Quiénes Somos</a>
+            <a href="#cursos" class="block py-2 text-gray-700 font-medium hover:text-brand-orange">Cursos SENCE</a>
+            <a href="#consultoria" class="block py-2 text-gray-700 font-medium hover:text-brand-orange">Consultoría y Servicios</a>
+            <a href="#franquicia" class="block py-2 text-gray-700 font-medium hover:text-brand-orange">Franquicia Tributaria</a>
+            <a href="#clientes" class="block py-2 text-gray-700 font-medium hover:text-brand-orange">Clientes</a>
+            <button onclick="openModal('Cotización General')" class="w-full mt-3 bg-brand-orange text-white font-semibold py-3 rounded-xl shadow text-center flex items-center justify-center gap-2">
+                <i class="fa-solid fa-file-signature"></i> Cotizar Capacitación
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- ================================================================= -->
+        <!-- EDITABLE SECCIÓN 3: HERO / PORTADA PRINCIPAL                      -->
+        <!-- ================================================================= -->
+        <section id="inicio" class="relative bg-brand-dark text-white overflow-hidden py-16 lg:py-24 hero-pattern">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/95 to-transparent z-0"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <!-- EDITABLE: Etiqueta Superior -->
+                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-3.5 py-1.5 rounded-full text-xs font-medium text-brand-yellow">
+                        <i class="fa-solid fa-leaf text-brand-green"></i>
+                        <span>Brochure de Servicios 2026 | OTEC Certificada</span>
+                    </div>
+
+                    <!-- EDITABLE: Título Principal H1 -->
+                    <h1 class="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white leading-tight">
+                        Capacitamos Personas, <br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-brand-yellow to-brand-green">
+                            Transformamos Organizaciones
+                        </span>
+                    </h1>
+
+                    <!-- EDITABLE: Texto Descriptivo Principal -->
+                    <p class="text-gray-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+                        Soluciones integrales de formación continua, consultoría HSEQ y desarrollos regenerativos 100% bonificables a través de la Franquicia Tributaria SENCE.
+                    </p>
+
+                    <!-- EDITABLE: Botones Principales de Acción -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#cursos" class="bg-brand-orange hover:bg-orange-600 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg hover:shadow-orange-500/25 transition-all text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-graduation-cap"></i> Ver Cursos SENCE
+                        </a>
+                        <a href="#consultoria" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-7 py-3.5 rounded-xl border border-white/20 transition-all text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-briefcase"></i> Servicios Corporativos
+                        </a>
+                    </div>
+
+                    <!-- EDITABLE: Cifras de Confianza / Estadísticas -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-gray-700/60 max-w-xl">
+                        <div>
+                            <div class="font-heading font-extrabold text-2xl lg:text-3xl text-brand-yellow">+10 Años</div>
+                            <div class="text-xs text-gray-400">Trayectoria Industrial</div>
+                        </div>
+                        <div>
+                            <div class="font-heading font-extrabold text-2xl lg:text-3xl text-brand-green">100%</div>
+                            <div class="text-xs text-gray-400">Franquicia SENCE</div>
+                        </div>
+                        <div>
+                            <div class="font-heading font-extrabold text-2xl lg:text-3xl text-brand-blue">NCh 2728</div>
+                            <div class="text-xs text-gray-400">Norma de Calidad</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EDITABLE: Tarjeta Lateral Informativa -->
+                <div class="lg:col-span-5 relative">
+                    <div class="bg-gradient-to-br from-white/10 to-white/5 border border-white/15 rounded-3xl p-6 backdrop-blur-xl shadow-2xl relative overflow-hidden">
+                        <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-brand-orange/20 rounded-full blur-2xl"></div>
+                        <div class="absolute -left-12 -top-12 w-48 h-48 bg-brand-blue/20 rounded-full blur-2xl"></div>
+                        
+                        <div class="relative z-10 space-y-5">
+                            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                                <span class="text-xs font-semibold text-brand-yellow uppercase tracking-wider">Acreditación Oficial</span>
+                                <span class="bg-emerald-500/20 text-emerald-300 text-xs px-2.5 py-1 rounded-full border border-emerald-500/30 font-medium">
+                                    Vigente 2026
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-4 bg-white/10 p-4 rounded-2xl">
+                                <div class="w-12 h-12 bg-brand-orange/20 rounded-xl flex items-center justify-center text-brand-orange text-2xl">
+                                    <i class="fa-solid fa-users-gear"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Redarquía Colaborativa</h4>
+                                    <p class="text-xs text-gray-300">Soluciones integrales trabajando desde lo individual a lo colectivo.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4 bg-white/10 p-4 rounded-2xl">
+                                <div class="w-12 h-12 bg-brand-blue/20 rounded-xl flex items-center justify-center text-brand-blue text-2xl">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Triple Impacto</h4>
+                                    <p class="text-xs text-gray-300">Equilibrio Social, Económico y Ecológico en cada programa.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-brand-orange/20 border border-brand-orange/30 rounded-2xl p-4 text-center">
+                                <p class="text-xs text-orange-200 italic font-medium">
+                                    "Impactar en la toma de Consciencia para el Desarrollo Regenerativo de Personas."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- EDITABLE SECCIÓN 4: BANNER OFICIAL SENCE                          -->
+        <!-- ================================================================= -->
+        <section class="bg-brand-light border-y border-gray-200 py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 bg-red-600 rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow">
+                        sence
+                    </div>
+                    <div>
+                        <!-- EDITABLE: Detalle de Acreditación -->
+                        <h3 class="font-heading font-bold text-brand-dark text-base">Organismo Técnico de Capacitación (OTEC) Acreditado</h3>
+                        <p class="text-xs text-gray-600">Certificación N° 2723-2022 | Cumplimiento estricto de Norma Chilena NCh 2728:2015</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-xs text-gray-500 font-medium hidden lg:inline">¿Tienes Franquicia Tributaria disponible?</span>
+                    <a href="#franquicia" class="text-xs bg-white text-brand-blue font-bold px-4 py-2.5 rounded-lg border border-brand-blue/30 hover:bg-brand-blue hover:text-white transition-all shadow-sm">
+                        Aprende a usar tu Franquicia <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- EDITABLE SECCIÓN 5: QUIÉNES SOMOS Y PILARES                       -->
+        <!-- ================================================================= -->
+        <section id="nosotros" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+                    <span class="text-brand-orange font-bold text-xs uppercase tracking-widest">Nuestra Esencia</span>
+                    <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-dark">
+                        Un enfoque redárquico y regenerativo para el desarrollo humano
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                        En Incentiva entendemos la formación no solo como la entrega de información, sino como un proceso de transformación consciente que fortalece la cultura organizacional.
+                    </p>
+                </div>
+
+                <!-- EDITABLE: 3 Tarjetas de Propuesta de Valor -->
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition-all group">
+                        <div class="w-14 h-14 bg-brand-orange/10 text-brand-orange rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-arrows-split-up-and-left"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-brand-dark mb-3">Flexibilidad y Adaptabilidad</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Diseñamos programas a la medida de los desafíos operacionales y estratégicos de tu empresa en modalidades Presencial, E-learning Sincrónico y Asincrónico.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition-all group">
+                        <div class="w-14 h-14 bg-brand-blue/10 text-brand-blue rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-medal"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-brand-dark mb-3">+10 Años de Experiencia</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Trayectoria comprobada acompañando a grandes industrias, minería, retail, logística y sector público en el desarrollo continuo de sus colaboradores.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition-all group">
+                        <div class="w-14 h-14 bg-brand-green/10 text-brand-green rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-brand-dark mb-3">Enfoque de Triple Impacto</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Impulsamos el crecimiento sustentable articulando la dimensión <span class="text-brand-orange font-semibold">Social</span>, <span class="text-brand-blue font-semibold">Económica</span> y <span class="text-brand-green font-semibold">Ecológica</span> en cada aprendizaje.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- EDITABLE: 4 Pilares del Propósito -->
+                <div class="bg-brand-dark text-white rounded-3xl p-8 lg:p-10 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 gradient-accent-bar"></div>
+                    <div class="text-center max-w-2xl mx-auto mb-10">
+                        <h3 class="font-heading font-bold text-2xl text-white">Pilares de Nuestro Propósito Regenerativo</h3>
+                        <p class="text-gray-400 text-xs mt-1">Creamos valor que trasciende, cuida los entornos y perdura en el tiempo.</p>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-white/5 border border-white/10 p-5 rounded-xl hover:bg-white/10 transition-colors">
+                            <div class="text-brand-green text-2xl mb-2"><i class="fa-solid fa-seedling"></i></div>
+                            <h4 class="font-bold text-white text-base mb-1">Consciencia</h4>
+                            <p class="text-xs text-gray-300">Para decisiones responsables, éticas y ambientalmente sostenibles.</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-5 rounded-xl hover:bg-white/10 transition-colors">
+                            <div class="text-brand-blue text-2xl mb-2"><i class="fa-solid fa-people-group"></i></div>
+                            <h4 class="font-bold text-white text-base mb-1">Colaboración</h4>
+                            <p class="text-xs text-gray-300">Trabajamos articulados para potenciar el talento colectivo.</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-5 rounded-xl hover:bg-white/10 transition-colors">
+                            <div class="text-brand-orange text-2xl mb-2"><i class="fa-solid fa-bullseye"></i></div>
+                            <h4 class="font-bold text-white text-base mb-1">Excelencia</h4>
+                            <p class="text-xs text-gray-300">Estándares altos y metodologías de impacto real en el trabajo.</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-5 rounded-xl hover:bg-white/10 transition-colors">
+                            <div class="text-brand-yellow text-2xl mb-2"><i class="fa-solid fa-rotate"></i></div>
+                            <h4 class="font-bold text-white text-base mb-1">Regeneración</h4>
+                            <p class="text-xs text-gray-300">Creamos valor que renueva los equipos y sostiene el futuro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- EDITABLE SECCIÓN 6: CATÁLOGOS DE CURSOS SENCE                     -->
+        <!-- ================================================================= -->
+        <section id="cursos" class="py-20 bg-gray-50 border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                    <div>
+                        <span class="text-brand-blue font-bold text-xs uppercase tracking-widest">Formación Bonificable</span>
+                        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-dark">Catálogo de Cursos SENCE</h2>
+                        <p class="text-gray-600 text-sm mt-1">Programas adaptados a los requerimientos normativos e industriales del mercado actual.</p>
+                    </div>
+
+                    <!-- EDITABLE: Botones de Filtro por Categoría -->
+                    <div class="flex flex-wrap gap-2" id="course-filters">
+                        <button onclick="filterCourses('todos')" class="filter-btn active bg-brand-dark text-white text-xs font-semibold px-4 py-2 rounded-xl shadow transition-all">Todos</button>
+                        <button onclick="filterCourses('liderazgo')" class="filter-btn bg-white hover:bg-gray-100 text-gray-700 text-xs font-semibold px-4 py-2 rounded-xl border border-gray-200 transition-all">Liderazgo</button>
+                        <button onclick="filterCourses('bienestar')" class="filter-btn bg-white hover:bg-gray-100 text-gray-700 text-xs font-semibold px-4 py-2 rounded-xl border border-gray-200 transition-all">Bienestar & Salud</button>
+                        <button onclick="filterCourses('servicio')" class="filter-btn bg-white hover:bg-gray-100 text-gray-700 text-xs font-semibold px-4 py-2 rounded-xl border border-gray-200 transition-all">Servicio al Cliente</button>
+                        <button onclick="filterCourses('excelencia')" class="filter-btn bg-white hover:bg-gray-100 text-gray-700 text-xs font-semibold px-4 py-2 rounded-xl border border-gray-200 transition-all">Excelencia Operacional</button>
+                        <button onclick="filterCourses('hseq')" class="filter-btn bg-white hover:bg-gray-100 text-gray-700 text-xs font-semibold px-4 py-2 rounded-xl border border-gray-200 transition-all">Seguridad HSEQ</button>
+                        <button onclick="filterCourses('icam')" class="filter-btn bg-white hover:bg-gray-100 text-gray-700 text-xs font-semibold px-4 py-2 rounded-xl border border-gray-200 transition-all">ICAM</button>
+                        <button onclick="filterCourses('mindfulness')" class="filter-btn bg-white hover:bg-gray-100 text-gray-700 text-xs font-semibold px-4 py-2 rounded-xl border border-gray-200 transition-all">Mindfulness</button>
+                    </div>
+                </div>
+
+                <!-- EDITABLE: Parrilla de Cursos (Puedes agregar, quitar o editar tarjetas) -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="course-grid">
+                    
+                    <!-- Curso 1: Liderazgo -->
+                    <div class="course-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col" data-category="liderazgo">
+                        <div class="bg-brand-blue/10 p-6 border-b border-brand-blue/10 flex justify-between items-start">
+                            <span class="bg-brand-blue text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Área 01</span>
+                            <span class="text-xs text-brand-blue font-semibold"><i class="fa-solid fa-clock mr-1"></i>16 - 24 hrs</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-brand-dark mb-2">Liderazgo y Habilidades Directivas</h3>
+                                <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                                    Desarrolla un liderazgo consciente, comunicación estratégica y gestión de equipos de alto desempeño en entornos cambiantes.
+                                </p>
+                                <ul class="text-xs text-gray-600 space-y-2">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Liderazgo consciente y transformador</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Toma de decisiones y delegación</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Feedback efectivo y motivación</li>
+                                </ul>
+                            </div>
+                            <button onclick="openModal('Curso: Liderazgo y Habilidades Directivas')" class="w-full bg-brand-blue hover:bg-blue-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-xs flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-file-invoice"></i> Cotizar este programa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Curso 2: Bienestar -->
+                    <div class="course-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col" data-category="bienestar">
+                        <div class="bg-brand-orange/10 p-6 border-b border-brand-orange/10 flex justify-between items-start">
+                            <span class="bg-brand-orange text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Área 02</span>
+                            <span class="text-xs text-brand-orange font-semibold"><i class="fa-solid fa-clock mr-1"></i>12 - 20 hrs</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-brand-dark mb-2">Bienestar, Autocuidado y Salud Integral</h3>
+                                <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                                    Promueve el bienestar físico, mental y emocional para un rendimiento laboral sostenible y prevención del Burnout.
+                                </p>
+                                <ul class="text-xs text-gray-600 space-y-2">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Prevención del agotamiento (Burnout)</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Equilibrio vida personal y laboral</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Promoción del autocuidado activo</li>
+                                </ul>
+                            </div>
+                            <button onclick="openModal('Curso: Bienestar y Salud Integral')" class="w-full bg-brand-orange hover:bg-orange-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-xs flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-file-invoice"></i> Cotizar este programa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Curso 3: Servicio al Cliente -->
+                    <div class="course-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col" data-category="servicio">
+                        <div class="bg-brand-yellow/10 p-6 border-b border-brand-yellow/10 flex justify-between items-start">
+                            <span class="bg-brand-yellow text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Área 03</span>
+                            <span class="text-xs text-brand-yellow font-semibold"><i class="fa-solid fa-clock mr-1"></i>16 hrs</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-brand-dark mb-2">Servicio al Cliente y Experiencias Memorables</h3>
+                                <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                                    Potencia la empatía, resolución de conflictos y diseño de interacciones memorables que generan lealtad.
+                                </p>
+                                <ul class="text-xs text-gray-600 space-y-2">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Comunicación asertiva y empática</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Manejo de clientes difíciles</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Fidelización centrada en personas</li>
+                                </ul>
+                            </div>
+                            <button onclick="openModal('Curso: Servicio al Cliente')" class="w-full bg-brand-yellow hover:bg-yellow-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-xs flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-file-invoice"></i> Cotizar este programa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Curso 4: Excelencia Operacional -->
+                    <div class="course-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col" data-category="excelencia">
+                        <div class="bg-brand-blue/10 p-6 border-b border-brand-blue/10 flex justify-between items-start">
+                            <span class="bg-brand-blue text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Área 04</span>
+                            <span class="text-xs text-brand-blue font-semibold"><i class="fa-solid fa-clock mr-1"></i>24 - 40 hrs</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-brand-dark mb-2">Excelencia Operacional y Mejora Continua</h3>
+                                <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                                    Optimiza procesos, elimina desperdicios e implementa herramientas Lean Management, 5S y metodología Kaizen.
+                                </p>
+                                <ul class="text-xs text-gray-600 space-y-2">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Principios Lean y Ciclo PDCA</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Metodología 5S: Orden y Limpieza</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Optimización de uso de recursos</li>
+                                </ul>
+                            </div>
+                            <button onclick="openModal('Curso: Excelencia Operacional')" class="w-full bg-brand-blue hover:bg-blue-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-xs flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-file-invoice"></i> Cotizar este programa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Curso 5: Seguridad HSEQ -->
+                    <div class="course-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col" data-category="hseq">
+                        <div class="bg-brand-green/10 p-6 border-b border-brand-green/10 flex justify-between items-start">
+                            <span class="bg-brand-green text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Área 05</span>
+                            <span class="text-xs text-brand-green font-semibold"><i class="fa-solid fa-clock mr-1"></i>16 - 32 hrs</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-brand-dark mb-2">Seguridad y Salud Ocupacional (HSEQ)</h3>
+                                <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                                    Formación rigurosa para la identificación de riesgos, cumplimiento normativo y cultura preventiva activa.
+                                </p>
+                                <ul class="text-xs text-gray-600 space-y-2">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Control de riesgos laborales</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Protocolos y planes de emergencia</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Promoción de entornos seguros</li>
+                                </ul>
+                            </div>
+                            <button onclick="openModal('Curso: Seguridad HSEQ')" class="w-full bg-brand-green hover:bg-green-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-xs flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-file-invoice"></i> Cotizar este programa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Curso 6: ICAM -->
+                    <div class="course-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col" data-category="icam">
+                        <div class="bg-brand-dark/10 p-6 border-b border-brand-dark/10 flex justify-between items-start">
+                            <span class="bg-brand-dark text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Área 06</span>
+                            <span class="text-xs text-brand-dark font-semibold"><i class="fa-solid fa-clock mr-1"></i>24 hrs</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-brand-dark mb-2">Metodología ICAM para Incidentes</h3>
+                                <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                                    Investigación sistemática de accidentes, análisis causa raíz y gestión de la confiabilidad de activos.
+                                </p>
+                                <ul class="text-xs text-gray-600 space-y-2">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Identificar, Comprender y Analizar</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Pensamiento crítico ante incidentes</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Aplicación en faenas e industria</li>
+                                </ul>
+                            </div>
+                            <button onclick="openModal('Curso: Metodología ICAM')" class="w-full bg-brand-dark hover:bg-gray-800 text-white font-semibold py-2.5 rounded-xl transition-colors text-xs flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-file-invoice"></i> Cotizar este programa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Curso 7: Mindfulness -->
+                    <div class="course-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col" data-category="mindfulness">
+                        <div class="bg-emerald-500/10 p-6 border-b border-emerald-500/10 flex justify-between items-start">
+                            <span class="bg-emerald-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Área 07</span>
+                            <span class="text-xs text-emerald-700 font-semibold"><i class="fa-solid fa-clock mr-1"></i>12 hrs</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-brand-dark mb-2">Mindfulness y Manejo del Estrés</h3>
+                                <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                                    Técnicas de atención plena para reducir el estrés, potenciar el foco y proteger la salud mental en alta exigencia.
+                                </p>
+                                <ul class="text-xs text-gray-600 space-y-2">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Mindfulness aplicado al trabajo</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Regulación emocional activa</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Foco y claridad mental operacional</li>
+                                </ul>
+                            </div>
+                            <button onclick="openModal('Curso: Mindfulness y Manejo del Estrés')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-xs flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-file-invoice"></i> Cotizar este programa
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- EDITABLE SECCIÓN 7: CONSULTORÍA Y ACREDITACIONES                  -->
+        <!-- ================================================================= -->
+        <section id="consultoria" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+                    <span class="text-brand-orange font-bold text-xs uppercase tracking-widest">Asesorías Corporativas</span>
+                    <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-dark">
+                        Consultoría Especializada y Acreditaciones
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Acompañamiento 360° desde la gestión del cambio cultural hasta la preparación normativa para faenas mineras e industriales.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <!-- Línea 1: Consultoría RRHH & HSEQ -->
+                    <div class="border border-gray-200 rounded-3xl p-8 hover:border-brand-blue/50 hover:shadow-xl transition-all flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-brand-blue/10 text-brand-blue rounded-xl flex items-center justify-center text-xl font-bold">01</div>
+                            <h3 class="font-heading font-bold text-xl text-brand-dark">Consultoría GP, RRHH y HSEQ</h3>
+                            <p class="text-xs text-gray-600 leading-relaxed">
+                                Estrategias para acompañar la evolución organizacional y asegurar entornos seguros y certificados.
+                            </p>
+                            <hr class="border-gray-100" />
+                            <ul class="text-xs text-gray-600 space-y-3">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-brand-orange mt-0.5"></i>
+                                    <span><strong>Gestión del Cambio Organizacional:</strong> Adopción efectiva de nuevos procesos.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-brand-orange mt-0.5"></i>
+                                    <span><strong>Clima Laboral:</strong> Diagnóstico de clima e intervención de cultura.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-brand-orange mt-0.5"></i>
+                                    <span><strong>Normas ISO:</strong> Implementación ISO 9001, 14001 y 45001.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <button onclick="openModal('Consultoría GP/HSEQ')" class="mt-8 w-full border border-brand-blue text-brand-blue font-semibold py-2.5 rounded-xl hover:bg-brand-blue hover:text-white transition-all text-xs">
+                            Solicitar Diagnóstico
+                        </button>
+                    </div>
+
+                    <!-- Línea 2: Acreditaciones Minería -->
+                    <div class="border border-gray-200 rounded-3xl p-8 hover:border-brand-green/50 hover:shadow-xl transition-all flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-brand-green/10 text-brand-green rounded-xl flex items-center justify-center text-xl font-bold">02</div>
+                            <h3 class="font-heading font-bold text-xl text-brand-dark">Acreditaciones Industriales & Minería</h3>
+                            <p class="text-xs text-gray-600 leading-relaxed">
+                                Preparación y homologación técnica para cumplir con exigencias de las principales compañías mineras.
+                            </p>
+                            <hr class="border-gray-100" />
+                            <ul class="text-xs text-gray-600 space-y-3">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-brand-green mt-0.5"></i>
+                                    <span><strong>Estándares Mineros:</strong> SIGMEL, RESSO, Collahuasi y minería pesada.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-brand-green mt-0.5"></i>
+                                    <span><strong>Habilitación de Proveedores:</strong> Carpetas de arranque y auditorías.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-brand-green mt-0.5"></i>
+                                    <span><strong>Verificación en Terreno:</strong> Inspecciones preventivas de procesos.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <button onclick="openModal('Acreditaciones Mineras')" class="mt-8 w-full border border-brand-green text-brand-green font-semibold py-2.5 rounded-xl hover:bg-brand-green hover:text-white transition-all text-xs">
+                            Consultar Acreditaciones
+                        </button>
+                    </div>
+
+                    <!-- Línea 3: Logística y Transporte -->
+                    <div class="border border-gray-200 rounded-3xl p-8 hover:border-brand-orange/50 hover:shadow-xl transition-all flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-brand-orange/10 text-brand-orange rounded-xl flex items-center justify-center text-xl font-bold">03</div>
+                            <h3 class="font-heading font-bold text-xl text-brand-dark">Logística y Transporte</h3>
+                            <p class="text-xs text-gray-600 leading-relaxed">
+                                Optimización operacional de flotas, seguridad vial y gestión eficiente de la cadena de suministro.
+                            </p>
+                            <hr class="border-gray-100" />
+                            <ul class="text-xs text-gray-600 space-y-3">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-brand-orange mt-0.5"></i>
+                                    <span><strong>Seguridad Vial Operacional:</strong> Prevención de accidentes de flota.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-brand-orange mt-0.5"></i>
+                                    <span><strong>Conducción Eficiente:</strong> Reducción de costos de mantenimiento y combustible.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-brand-orange mt-0.5"></i>
+                                    <span><strong>Gestión de Activos:</strong> Disponibilidad y confiabilidad logística.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <button onclick="openModal('Asesoría Logística')" class="mt-8 w-full border border-brand-orange text-brand-orange font-semibold py-2.5 rounded-xl hover:bg-brand-orange hover:text-white transition-all text-xs">
+                            Saber más de Logística
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- EDITABLE SECCIÓN 8: GUÍA PASO A PASO FRANQUICIA SENCE            -->
+        <!-- ================================================================= -->
+        <section id="franquicia" class="py-20 bg-brand-dark text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-5 space-y-6">
+                        <span class="text-brand-yellow font-bold text-xs uppercase tracking-widest">Aprovecha Tu Presupuesto</span>
+                        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white">
+                            ¿Cómo capacitar con Franquicia Tributaria SENCE?
+                        </h2>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            La Franquicia Tributaria es un incentivo estatal que permite a las empresas contribuyentes en Primera Categoría descontar de sus impuestos el monto invertido en capacitación (hasta el 1% de la planilla anual de sueldos).
+                        </p>
+                        <div class="bg-white/10 p-5 rounded-2xl border border-white/15 space-y-2">
+                            <h4 class="font-bold text-brand-yellow text-sm"><i class="fa-solid fa-lightbulb mr-2"></i>Nos encargamos de todo el proceso</h4>
+                            <p class="text-xs text-gray-300">Te acompañamos en la inscripción en la plataforma SENCE, control de asistencia y documentación de liquidación.</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7">
+                        <div class="space-y-4">
+                            <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex gap-4 items-start hover:bg-white/10 transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-brand-orange flex items-center justify-center font-bold text-white shrink-0">1</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">Diagnóstico de Necesidades</h4>
+                                    <p class="text-xs text-gray-300 mt-1">Analizamos junto a tu equipo de RRHH las brechas operacionales a cerrar sin costo.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex gap-4 items-start hover:bg-white/10 transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-brand-blue flex items-center justify-center font-bold text-white shrink-0">2</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">Selección o Codificación del Curso</h4>
+                                    <p class="text-xs text-gray-300 mt-1">Seleccionamos un código SENCE vigente de nuestro catálogo o tramitamos una codificación a medida.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex gap-4 items-start hover:bg-white/10 transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-brand-green flex items-center justify-center font-bold text-white shrink-0">3</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">Inscripción en el Portal SENCE</h4>
+                                    <p class="text-xs text-gray-300 mt-1">Les asesoramos para inscribir el curso con al menos 2 días hábiles antes de su inicio.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex gap-4 items-start hover:bg-white/10 transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-brand-yellow flex items-center justify-center font-bold text-white shrink-0">4</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">Ejecución y Descuento Tributario</h4>
+                                    <p class="text-xs text-gray-300 mt-1">Impartimos la capacitación y emitimos los certificados para la liquidación directa de impuestos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- EDITABLE SECCIÓN 9: CLIENTES DESTACADOS                           -->
+        <!-- ================================================================= -->
+        <section id="clientes" class="py-16 bg-gray-50 border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+                <div>
+                    <span class="text-gray-500 font-bold text-xs uppercase tracking-widest">Confianza y Experiencia</span>
+                    <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-brand-dark mt-1">Empresas que Confían en Incentiva</h2>
+                </div>
+
+                <!-- EDITABLE: Lista de Clientes (Puedes agregar o cambiar los nombres/logos) -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-center opacity-80">
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-200 font-extrabold text-gray-700 text-sm">BHP Escondida</div>
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-200 font-extrabold text-gray-700 text-sm">Falabella</div>
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-200 font-extrabold text-gray-700 text-sm">Cencosud</div>
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-200 font-extrabold text-gray-700 text-sm">Zurich Santander</div>
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-200 font-extrabold text-gray-700 text-sm">Ultramar</div>
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-200 font-extrabold text-gray-700 text-sm">Sitrans</div>
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-200 font-extrabold text-gray-700 text-sm">Axinntus</div>
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-200 font-extrabold text-gray-700 text-sm">Farmacias Ahumada</div>
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-200 font-extrabold text-gray-700 text-sm">Sodimac</div>
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-200 font-extrabold text-gray-700 text-sm">GORE Metropolitano</div>
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-200 font-extrabold text-gray-700 text-sm">Muni Isla de Pascua</div>
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-200 font-extrabold text-gray-700 text-sm">VSPT Wine Group</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDITABLE: CTA Final de la página -->
+        <section class="bg-gradient-to-r from-brand-orange to-amber-600 text-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <h3 class="font-heading font-extrabold text-2xl sm:text-3xl">¿Listo para transformar a tu equipo?</h3>
+                    <p class="text-orange-100 text-sm mt-1">Desarrollamos hoy un mejor mañana. Diseñemos juntos tu plan de formación.</p>
+                </div>
+                <button onclick="openModal('Asesoría General')" class="bg-brand-dark hover:bg-black text-white font-bold px-8 py-3.5 rounded-xl shadow-lg transition-all text-sm shrink-0">
+                    <i class="fa-solid fa-comments mr-2"></i> Hablar con un Asesor
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================================================================= -->
+    <!-- EDITABLE SECCIÓN 10: MODAL DE COTIZACIÓN INTERACTIVO              -->
+    <!-- ================================================================= -->
+    <div id="quote-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 relative shadow-2xl overflow-hidden border border-gray-100">
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-gray-400 hover:text-brand-dark transition-colors p-2 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="mb-6">
+                <span class="text-brand-orange font-bold text-xs uppercase tracking-wider">Formulario de Cotización</span>
+                <h3 class="font-heading font-extrabold text-2xl text-brand-dark mt-1" id="modal-title">Cotizar Programa</h3>
+                <p class="text-xs text-gray-500">Un ejecutivo comercial se pondrá en contacto en menos de 24 horas.</p>
+            </div>
+
+            <!-- EDITABLE: Campos del Formulario de Cotización -->
+            <form id="quote-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <input type="hidden" id="selected-service" name="service" value="General">
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">Nombre y Apellido *</label>
+                        <input type="text" required class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-xs focus:ring-2 focus:ring-brand-orange focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">Empresa *</label>
+                        <input type="text" required class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-xs focus:ring-2 focus:ring-brand-orange focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">Email Corporativo *</label>
+                        <input type="email" required class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-xs focus:ring-2 focus:ring-brand-orange focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">Teléfono *</label>
+                        <input type="tel" required placeholder="+56 9..." class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-xs focus:ring-2 focus:ring-brand-orange focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">Servicio de Interés</label>
+                        <select class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-xs focus:ring-2 focus:ring-brand-orange focus:outline-none">
+                            <option>Cursos SENCE</option>
+                            <option>Consultoría GP / RRHH / HSEQ</option>
+                            <option>Acreditaciones Mineras</option>
+                            <option>Logística y Transporte</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">N° de Participantes</label>
+                        <input type="number" min="1" placeholder="Ej: 15" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-xs focus:ring-2 focus:ring-brand-orange focus:outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Requerimiento Específico *</label>
+                    <textarea rows="3" required placeholder="Indica fechas estimadas, modalidad deseada o dudas generales..." class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-xs focus:ring-2 focus:ring-brand-orange focus:outline-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-brand-orange hover:bg-orange-600 text-white font-bold py-3 rounded-xl transition-colors text-xs uppercase tracking-wider shadow-lg">
+                    Enviar Solicitud de Cotización
+                </button>
+            </form>
+
+            <div id="form-success" class="hidden text-center py-8 space-y-3">
+                <div class="w-12 h-12 bg-green-100 text-brand-green rounded-full flex items-center justify-center text-2xl mx-auto">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h4 class="font-bold text-lg text-brand-dark">¡Cotización Enviada con Éxito!</h4>
+                <p class="text-xs text-gray-600 max-w-xs mx-auto">Hemos recibido tus datos correctamente. Nuestro equipo se pondrá en contacto muy pronto.</p>
+                <button onclick="closeModal()" class="mt-4 text-xs font-bold text-brand-blue hover:underline">Cerrar ventana</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- EDITABLE SECCIÓN 11: PIE DE PÁGINA (FOOTER)                       -->
+    <!-- ================================================================= -->
+    <footer class="bg-brand-dark text-white text-xs pt-16 pb-8 border-t-4 border-brand-orange">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+            <!-- EDITABLE Columna 1: Datos de la Empresa -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <span class="font-heading font-extrabold text-xl text-white">Incentiva<span class="text-brand-orange">ndo</span></span>
+                </div>
+                <p class="text-gray-400 leading-relaxed">
+                    Incentiva OTEC SpA. Organismo Técnico de Capacitación Certificado bajo Norma Chilena de Calidad NCh 2728:2015.
+                </p>
+                <div class="text-[11px] text-gray-400 space-y-1">
+                    <p><strong>Acreditación SENCE:</strong> Res. Ex. N° 2723-2022</p>
+                    <p><strong>Certificación:</strong> NCh 2728:2015 Vigente</p>
+                </div>
+            </div>
+
+            <!-- EDITABLE Columna 2: Menú de Navegación -->
+            <div class="space-y-3">
+                <h4 class="font-bold text-white uppercase tracking-wider text-xs">Navegación</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#inicio" class="hover:text-brand-yellow">Inicio</a></li>
+                    <li><a href="#nosotros" class="hover:text-brand-yellow">Quiénes Somos</a></li>
+                    <li><a href="#cursos" class="hover:text-brand-yellow">Catálogo Cursos SENCE</a></li>
+                    <li><a href="#consultoria" class="hover:text-brand-yellow">Consultoría HSEQ & GP</a></li>
+                    <li><a href="#franquicia" class="hover:text-brand-yellow">Franquicia Tributaria</a></li>
+                </ul>
+            </div>
+
+            <!-- EDITABLE Columna 3: Información de Contacto -->
+            <div class="space-y-3">
+                <h4 class="font-bold text-white uppercase tracking-wider text-xs">Contacto Directo</h4>
+                <ul class="space-y-2.5 text-gray-400">
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot text-brand-orange"></i>
+                        <span>Santiago, Chile</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-brand-blue"></i>
+                        <span>+56 9 1234 5678</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-brand-green"></i>
+                        <span>contacto@incentivando.cl</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-globe text-brand-yellow"></i>
+                        <span>www.incentivando.cl</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- EDITABLE Columna 4: Redes Sociales -->
+            <div class="space-y-4">
+                <h4 class="font-bold text-white uppercase tracking-wider text-xs">Redes Sociales</h4>
+                <div class="flex gap-3">
+                    <a href="#" class="w-9 h-9 bg-white/10 rounded-xl flex items-center justify-center text-gray-300 hover:bg-brand-blue hover:text-white transition-colors">
+                        <i class="fa-brands fa-linkedin-in text-sm"></i>
+                    </a>
+                    <a href="#" class="w-9 h-9 bg-white/10 rounded-xl flex items-center justify-center text-gray-300 hover:bg-brand-orange hover:text-white transition-colors">
+                        <i class="fa-brands fa-instagram text-sm"></i>
+                    </a>
+                    <a href="#" class="w-9 h-9 bg-white/10 rounded-xl flex items-center justify-center text-gray-300 hover:bg-emerald-600 hover:text-white transition-colors">
+                        <i class="fa-brands fa-whatsapp text-sm"></i>
+                    </a>
+                </div>
+                <div class="pt-2 text-[11px] text-gray-500">
+                    Capacitamos personas, transformamos organizaciones, impulsamos futuros sostenibles.
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800 pt-6 flex flex-col sm:flex-row justify-between items-center text-gray-500 text-[11px]">
+            <p>© 2026 Incentiva OTEC SpA. Todos los derechos reservados.</p>
+            <div class="flex gap-4 mt-2 sm:mt-0">
+                <a href="#" class="hover:underline">Política de Privacidad</a>
+                <a href="#" class="hover:underline">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================================================================= -->
+    <!-- EDITABLE SECCIÓN 12: SCRIPTS Y LÓGICA INTERACTIVA                 -->
+    <!-- ================================================================= -->
+    <script>
+        // Toggle Menú Móvil
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Filtrado dinámico de cursos
+        function filterCourses(category) {
+            const cards = document.querySelectorAll('.course-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-dark', 'text-white');
+                btn.classList.add('bg-white', 'text-gray-700');
+            });
+
+            event.currentTarget.classList.remove('bg-white', 'text-gray-700');
+            event.currentTarget.classList.add('bg-brand-dark', 'text-white');
+
+            cards.forEach(card => {
+                if (category === 'todos' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Control del Modal de Cotización
+        function openModal(serviceName) {
+            const modal = document.getElementById('quote-modal');
+            const title = document.getElementById('modal-title');
+            const serviceInput = document.getElementById('selected-service');
+            const form = document.getElementById('quote-form');
+            const success = document.getElementById('form-success');
+
+            title.innerText = serviceName ? `Cotizar: ${serviceName}` : 'Cotizar Programa';
+            serviceInput.value = serviceName || 'General';
+            
+            form.classList.remove('hidden');
+            success.classList.add('hidden');
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('quote-modal');
+            modal.classList.add('hidden');
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const form = document.getElementById('quote-form');
+            const success = document.getElementById('form-success');
+
+            form.classList.add('hidden');
+            success.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
